@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Hyperlink</title>
+</head>
+<body>
+    <hr color="blue" size="3" width="50%" align="left">
+    <font size="4" color="red">
+        <a href="#home" onclick="showPage('home')">Home</a> | 
+        <a href="#profil" onclick="showPage('profil')">Profil</a> | 
+        <a href="#about" onclick="showPage('about')">About</a> | 
+        <a href="#galery" onclick="showPage('galery')">Gallery</a> | 
+        <a href="#kontak" onclick="showPage('kontak')">Kontak</a>
+    </font>
+    <hr color="blue" size="3" width="50%" align="left">
+    
+    <div id="content">
+        <font size="3">
+            Assalammualaikum. Wr. Wb. <br>
+            Apa kabar semua? Salam kenal, ini adalah web perdanaku. Web ini berisi informasi tentang kegemaranku. <br> 
+            Semoga web ini dapat menginspirasi Anda saat liburan. <br> 
+            Kunjungi: <a href="http://www.google.com" target="_blank">Google</a> <br>
+            Silakan hubungi saya jika ada yang ingin didiskusikan melalui <a href="mailto:endarnirmala@gmail.com">email</a>.
+        </font>
+    </div>
+
+    <script>
+        function showPage(page) {
+            var content = document.getElementById("content");
+            if (page === 'home') {
+                content.innerHTML = `
+                    <font size="3">
+                        <h1>Selamat Datang di Halaman Home</h1>
+                        <p>Ini adalah halaman utama dari web ini.</p>
+                    </font>
+                `;
+            } else if (page === 'profil') {
+                content.innerHTML = `
+                    <font size="3">
+                        <h1>Profil Saya</h1>
+                        <p>Nama: Rangga Maulana<br>Pekerjaan: mahasiswa</p>
+                    </font>
+                `;
+            } else if (page === 'about') {
+                content.innerHTML = `
+                    <font size="3">
+                        <h1>Tentang Web Ini</h1>
+                        <p>Web ini berisi informasi seputar kegemaranku dan hal-hal menarik lainnya.</p>
+                    </font>
+                `;
+            } else if (page === 'galery') {
+                content.innerHTML = `
+                    <font size="3">
+                        <h1>Galeri Foto</h1>
+                        <p>Berikut beberapa foto dari perjalanan saya.</p>
+                         <img src="matlab rangga.jpg" alt="Contoh Gambar" width="300" height="300">
+
+                    </font>
+                `;
+            } else if (page === 'kontak') {
+                content.innerHTML = `
+                    <font size="3">
+                        <h1>Kontak Saya</h1>
+                        <p>Anda dapat menghubungi saya melalui email di 
+                        <a href="mailto:ranggamlana15@gmail.com">ranggamlana15@gmail.com</a>.</p>
+                    </font>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
